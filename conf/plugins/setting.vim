@@ -59,7 +59,7 @@ let Tlist_Auto_Open = 0
 " ctrlp ----------------------------------------------------------------------
 let g:ctrlp_map = '<leader>ff'
 let g:ctrlp_cmd = 'CtrlP'
-map <C-p> :CtrlPMRU<cr>
+map <leader>fp :CtrlPMRU<cr>
 let g:ctrlp_custom_ignore = {
     \ 'dir':  '\v[\/]\.(git|hg|svn|rvm)$',
     \ 'file': '\v\.(exe|so|dll|zip|tar|tar.gz|pyc)$',
@@ -120,6 +120,9 @@ endif
 " supertab -------------------------------------------------------------------
 let g:SuperTabRetainCompletionType=2
 let g:SuperTabDefaultCompletionType="<C-X><C-O>"
+
+" multiple-cursors -----------------------------------------------------------
+" use default key map
 
 " indent guides --------------------------------------------------------------
 let g:indent_guides_enable_on_vim_startup=1

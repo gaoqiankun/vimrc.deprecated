@@ -17,6 +17,7 @@ Plugin 'DoxygenToolkit.vim'               " comment as document
 Plugin 'scrooloose/nerdcommenter'         " comment tool
 Plugin 'fholgado/minibufexpl.vim'         " buffer navigator
 Plugin 'ervandew/supertab'                " Perform insert mode completions with Tab
+Plugin 'terryma/vim-multiple-cursors'     " multi cursor 
 Plugin 'nathanaelkane/vim-indent-guides'  " make indent  visiablity
 Plugin 'rhysd/vim-clang-format'           " format code style
 Plugin 'valloric/youcompleteme'           " complete 
