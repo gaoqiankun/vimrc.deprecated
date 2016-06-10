@@ -152,6 +152,9 @@ let g:ycm_complete_in_strings = 1
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
 let g:ycm_show_diagnostics_ui = 0        "disable error warnings and highlight
 
+" vim-polyglot ---------------------------------------------------------------
+" go to ~/.vim/bundle/vim-polyglot build
+
 " git guntter ----------------------------------------------------------------
 nmap <leader>tg :GitGutterToggle<cr> 
 let g:GitGutterLineHighlightsEnable = 1

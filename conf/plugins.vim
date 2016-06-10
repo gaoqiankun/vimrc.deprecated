@@ -20,6 +20,7 @@ Plugin 'ervandew/supertab'                " Perform insert mode completions with
 Plugin 'nathanaelkane/vim-indent-guides'  " make indent  visiablity
 Plugin 'rhysd/vim-clang-format'           " format code style
 Plugin 'valloric/youcompleteme'           " complete 
+Plugin 'sheerun/vim-polyglot'             " syntax higglighting plugins for most languages
 Plugin 'kshenoy/vim-signature'            " toggle, display and navigate marks
 Plugin 'airblade/vim-gitgutter'           " show git diff  flag on guntter
 Plugin 'powerline/fonts'                  " powerline fonts
