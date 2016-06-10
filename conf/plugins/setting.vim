@@ -92,6 +92,10 @@ let g:DoxygenToolkit_authorName="Qiankun Gao"
 let g:doxygen_enhanced_color=1
 
 " nerd commenter -------------------------------------------------------------
+let g:NERDSpaceDelims = 1       " add spaces after comment delimiters by default
+let g:NERDCompactSexyComs = 1   " use compact syntax for prettified multi-line comments
+let g:NERDCommentEmptyLines = 1 " allow commenting and inverting empty lines
+
 
 " minibufferexplorer ---------------------------------------------------------
 :nmap <leader>tm :MBEToggle<cr>:MBEFocus<cr>

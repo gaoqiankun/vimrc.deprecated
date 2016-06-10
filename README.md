@@ -59,6 +59,9 @@
 |&lt;leader&gt;]g                | jump to git gutter's next hunk              |
 |&lt;leader&gt;[g                | jump to git gutter's prev hunk              |
 
+###Comment Keys
+See [nerdcommenter#default-mappings](https://github.com/scrooloose/nerdcommenter#default-mappings){:target="_blank"}
+
 ## Clang format
 remove  *AlignConsecutiveAssignments* option if your clang-format version less than 3.9 (latest)
 
