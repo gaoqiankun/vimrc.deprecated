@@ -133,13 +133,13 @@ let g:clang_format#style_options = {
   \ "AllowShortIfStatementsOnASingleLine" : "true",
   \ "AlwaysBreakTemplateDeclarations" : "true",
   \ "AlignTrailingComments" : "false",
-  \ "Standard" : "C++11",
-  \ "AlignConsecutiveAssignments" : "true"
+  \ "AlignConsecutiveAssignments" : "true",
+  \ "Standard" : "C++11"
   \}
 " map to cf in C++ code
 autocmd FileType c,cpp,objc nnoremap <buffer> <leader>cf :<C-u>ClangFormat<cr>
 autocmd FileType c,cpp,objc vnoremap <buffer> <leader>cf :ClangFormat<cr>
-autocmd FileType c,cpp,objc ClangFormatAutoEnable  "disable auto format on save
+autocmd FileType c,cpp,objc ClangFormatAutoEnable  "enable auto format on save
 
 " youcomeleteme --------------------------------------------------------------
 nnoremap <leader>td :YcmCompleter GoToDefinition<cr> 
@@ -149,8 +149,8 @@ let g:ycm_global_ycm_extra_conf =
 set completeopt=longest,menu
 let g:ycm_complete_in_comments = 1
 let g:ycm_complete_in_strings = 1
-let g:ycm_collect_identifiers_from_comments_and_strings = 0
-let g:ycm_max_diagnostics_to_display = 0         "disable error warnings and highlight
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
+let g:ycm_show_diagnostics_ui = 0        "disable error warnings and highlight
 
 " git guntter ----------------------------------------------------------------
 nmap <leader>tg :GitGutterToggle<cr> 
@@ -161,10 +161,16 @@ nmap <leader>[g :GitGutterPrevHunk<cr>
 " airline status bar ---------------------------------------------------------
 set t_Co=256
 let g:airline_powerline_fonts = 1
-"let g:airline_theme="luna"
+let g:airline_theme="luna"
 
 " solarized ------------------------------------------------------------------
 let g:solarized_termcolors=256
+let g:solarized_termtrans=0
+let g:solarized_bold=1
+let g:solarized_italic=1
+let g:solarized_underline=1
+let g:solarized_contrast="normal"
+let g:solarized_visibility="low"
 colorscheme solarized
 if has('gui_running')
   set background=light
