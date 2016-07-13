@@ -173,17 +173,6 @@ set t_Co=256
 let g:airline_powerline_fonts = 1
 let g:airline_theme="luna"
 
-" solarized ------------------------------------------------------------------
-let g:solarized_termcolors=256
-let g:solarized_termtrans=0
-let g:solarized_bold=1
-let g:solarized_italic=1
-let g:solarized_underline=1
-let g:solarized_contrast="normal"
-let g:solarized_visibility="low"
-colorscheme solarized
-if has('gui_running')
-  set background=light
-else
-  set background=dark
-endif
+" theme  ---------------------------------------------------------------------
+colorscheme darkblue
+

@@ -20,7 +20,6 @@ function! ToggleFolding()
   endif
 endfunction
 
-
 " close current split pane
 nmap <Leader>q :q<CR>
 " save current pane
@@ -33,4 +32,7 @@ vnoremap <Leader>y "+y
 nmap <Leader>p "+p
 " build and link project base on make and Makefile
 nmap <Leader>m :wa<CR>:make<CR>:bot cw<CR><CR>
+
+" Allow saving of files as sudo when I forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
 
