@@ -68,4 +68,7 @@ set mat=2     " How many tenths of a second to blink
 set incsearch
 set ignorecase
 
+" auto chdir when open a file ------------------------------------------
+set autochdir
+
 filetype plugin on
