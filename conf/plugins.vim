@@ -27,7 +27,6 @@ Plugin 'airblade/vim-gitgutter'           " show git diff  flag on guntter
 Plugin 'powerline/fonts'                  " powerline fonts
 Plugin 'vim-airline/vim-airline'          " a cool menu bar
 Plugin 'vim-airline/vim-airline-themes'   " themes for airline menu bar
-Plugin 'indentcpp.vim'                    " Indent file for Google C++ Coding Style
 
 call vundle#end()           " required
 filetype plugin indent on   " required
