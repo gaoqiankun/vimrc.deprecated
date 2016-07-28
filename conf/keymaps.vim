@@ -36,3 +36,8 @@ nmap <Leader>m :wa<CR>:make<CR>:bot cw<CR><CR>
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
 
+" move cursor in input mode
+imap <C-h> <left>
+imap <C-j> <down>
+imap <C-k> <up>
+imap <C-l> <right>
