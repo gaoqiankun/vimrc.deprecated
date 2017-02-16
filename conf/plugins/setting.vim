@@ -11,7 +11,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | call WM_init() | endi
 function! WM_init()
   if IsWinManagerVisible() | exec "WMToggle" | return | endif
   exec "WMToggle" | q | exec "FirstExplorerWindow"
-endfunction  
+endfunction
 
 " nerdtree -------------------------------------------------------------------
 let g:NERDTree_title='[NERD Tree]'
@@ -72,8 +72,8 @@ let g:ctrlp_mruf_max=500
 let g:ctrlp_follow_symlinks=1
 
 " ctrlsf ----------------------------------------------------------------------
-nnoremap <leader>fa :CtrlSF<space> 
-nnoremap <leader>fq :CtrlSFQuickfix<space> 
+nnoremap <leader>fa :CtrlSF<space>
+nnoremap <leader>fq :CtrlSFQuickfix<space>
 let g:ctrlsf_position = 'bottom'
 let g:ctrlsf_auto_close = 1
 let g:ctrlsf_default_root = 'project'
@@ -109,7 +109,7 @@ let g:miniBufExplModSelTarget = 1
 let g:bufExplorerMaxHeight=30
 let g:miniBufExplorerMoreThanOne=2
 
-" make cursor back to position before close 
+" make cursor back to position before close
 if has("autocmd")
  autocmd BufReadPost *
  \ if line("'\"") > 0 && line ("'\"") <= line("$") |
@@ -149,9 +149,9 @@ autocmd FileType c,cpp,objc vnoremap <buffer> <leader>cf :ClangFormat<cr>
 autocmd FileType c,cpp,objc ClangFormatAutoEnable  "enable auto format on save
 
 " youcomeleteme --------------------------------------------------------------
-nnoremap <leader>td :YcmCompleter GoToDefinition<cr> 
+nnoremap <leader>td :YcmCompleter GoToDefinition<cr>
 nnoremap <leader>tr :YcmCompleter GoToDeclaration<cr>
-let g:ycm_global_ycm_extra_conf = 
+let g:ycm_global_ycm_extra_conf =
   \ '~/.vim/bundle/youcompleteme/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 set completeopt=longest,menu
 let g:ycm_complete_in_comments = 1
@@ -163,7 +163,7 @@ let g:ycm_show_diagnostics_ui = 0        "disable error warnings and highlight
 " go to ~/.vim/bundle/vim-polyglot build
 
 " git guntter ----------------------------------------------------------------
-nmap <leader>tg :GitGutterToggle<cr> 
+nmap <leader>tg :GitGutterToggle<cr>
 let g:GitGutterLineHighlightsEnable = 1
 nmap <leader>]g :GitGutterNextHunk<cr>
 nmap <leader>[g :GitGutterPrevHunk<cr>
@@ -172,6 +172,9 @@ nmap <leader>[g :GitGutterPrevHunk<cr>
 set t_Co=256
 let g:airline_powerline_fonts = 1
 let g:airline_theme="luna"
+
+" trailing witespace ---------------------------------------------------------
+autocmd BufWritePre * :FixWhitespace
 
 " theme  ---------------------------------------------------------------------
 colorscheme darkblue

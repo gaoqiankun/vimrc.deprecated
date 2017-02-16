@@ -1,6 +1,6 @@
 " key maps -------------------------------------------------------------------
 
-" switch window splits 
+" switch window splits
 nmap <silent> <c-h> :wincmd h<cr>
 nmap <silent> <c-j> :wincmd j<cr>
 nmap <silent> <c-k> :wincmd k<cr>
