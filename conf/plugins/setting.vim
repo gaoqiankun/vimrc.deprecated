@@ -179,3 +179,6 @@ autocmd BufWritePre * :FixWhitespace
 " theme  ---------------------------------------------------------------------
 colorscheme darkblue
 hi Normal guibg=NONE ctermbg=NONE
+
+" vim-flake8 -----------------------------------------------------------------
+autocmd BufWritePost *.py call Flake8()
