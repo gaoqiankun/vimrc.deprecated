@@ -178,4 +178,4 @@ autocmd BufWritePre * :FixWhitespace
 
 " theme  ---------------------------------------------------------------------
 colorscheme darkblue
-
+hi Normal guibg=NONE ctermbg=NONE
