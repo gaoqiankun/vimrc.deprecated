@@ -29,6 +29,10 @@ Plugin 'vim-airline/vim-airline'          " a cool menu bar
 Plugin 'vim-airline/vim-airline-themes'   " themes for airline menu bar
 Plugin 'bronson/vim-trailing-whitespace'  " auto trailing whitespace at the EOL
 Plugin 'nvie/vim-flake8'                  " python linter
+Plugin 'shougo/vimproc.vim'               " a great asynchronous execution library for Vim
+Plugin 'eagletmt/ghcmod-vim'              " haskell linter
+Plugin 'eagletmt/neco-ghc'                " haskell completion
+Plugin 'alx741/vim-stylishask'            " haskell code formater
 
 call vundle#end()           " required
 filetype plugin indent on   " required
