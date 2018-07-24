@@ -34,8 +34,8 @@ set ruler
 set rulerformat=%15(%c%V\ %p%%%)
 
 if exists('+colorcolumn')
-  let &colorcolumn=join(range(81,999),",")
-  let &colorcolumn="80,".join(range(400,999),",")
+  let &colorcolumn=join(range(81,999, 40),",")
+  " let &colorcolumn="80,120,".join(range(400,999),",")
 endif
 
 " Column 80 marker
