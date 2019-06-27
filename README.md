@@ -1,16 +1,20 @@
-## Installation:
-`git clone https://github.com/gaoqiankun/vimrc.git && cd vimrc && bash init.sh`
+## Installation
+
+```bash
+git clone https://github.com/gaoqiankun/vimrc.git ~/vimrc && cd ~/vimrc && bash init.sh
+```
 
 
-## Dependencies:
+## Dependencies
 1. Clang-format3.4 or higher (vim-clang-format)
-2. vim7.3 build with python enabled(youcompleteme)
+2. vim7.3+ build with python enabled(youcompleteme)
 
-## Key Maps:
+## Key Maps
 
-###Basic
-|key                             | description                                 |
-|--------------------------------|---------------------------------------------|
+### Basic
+
+|Key                           | Description                            |
+|----------|-------------------------------|
 |;                               | leader                                      |
 |rl                              | reload vimrc(after you edit configs)        |
 |lg                              | move cursor to line head                    |
@@ -34,8 +38,9 @@
 
 
 
-###Plugins
-|key                             | description                                 |
+### Plugins
+
+|Key                             | Description                                 |
 |--------------------------------|---------------------------------------------|
 |wm                              | toggle winmanager(nerdtree file list)       |
 |tl                              | toggle taglist                              |
@@ -62,8 +67,8 @@
 |&lt;ctrl&gt;p                   | multiple cursor unselect one                |
 |&lt;ctrl&gt;x                   | multiple cursor skip one                    |
 
-###Comment Keys
-See [nerdcommenter#default-mappings](https://github.com/scrooloose/nerdcommenter#default-mappings){:target="_blank"}
+### Comment Keys
+See [nerdcommenter#default-mappings](https://github.com/scrooloose/nerdcommenter#default-mappings)
 
 
 ## Clang format
