@@ -10,6 +10,7 @@ Plugin 'scrooloose/nerdtree'              " file tree
 Plugin 'xuyuanp/nerdtree-git-plugin'      " nerd tree show git status flags
 Plugin 'taglist.vim'
 Plugin 'ctrlpvim/ctrlp.vim'               " search file
+Plugin 'dyng/ctrlsf.vim'                  " search keyword
 Plugin 'DoxygenToolkit.vim'               " comment as document
 Plugin 'scrooloose/nerdcommenter'         " comment tool
 Plugin 'ervandew/supertab'                " Perform insert mode completions with Tab
