@@ -29,7 +29,7 @@ function! NERDTree_IsValid()
 endfunction
 
 " nerdtree git plugin --------------------------------------------------------
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Modified"  : "✹",
     \ "Staged"    : "✚",
     \ "Untracked" : "✭",
@@ -83,15 +83,6 @@ let g:ctrlsf_ignore_dir = ['.git', '.hg', '.svn', '.rvm']
 " a --------------------------------------------------------------------------
 nmap <leader>cd :A<cr>                           " toggle header and cpp file
 
-" Doxygen Toolkit ------------------------------------------------------------
-nmap <leader>dx :Dox<cr>
-let g:load_doxygen_syntax=1
-let g:DoxygenToolkit_briefTag_funcName="yes"
-let g:DoxygenToolkit_paramTag_pre="@Param "
-let g:DoxygenToolkit_returnTag="@Returns   "
-let g:DoxygenToolkit_authorName="Qiankun Gao"
-let g:doxygen_enhanced_color=1
-
 " nerd commenter -------------------------------------------------------------
 let g:NERDSpaceDelims = 1       " add spaces after comment delimiters by default
 let g:NERDCompactSexyComs = 1   " use compact syntax for prettified multi-line comments
@@ -120,21 +111,6 @@ let g:indent_guides_guide_size = 1
 :nmap <silent> <Leader>ie <Plug>IndentGuidesEnable
 :nmap <silent> <Leader>id <Plug>IndentGuidesDisable
 
-" clang format ---------------------------------------------------------------
-" Toggle auto formatting:
-" nmap <leader>tc :ClangFormatAutoToggle<cr>
-" let g:clang_format#style_options = {
-  " \ "AccessModifierOffset" : -1,
-  " \ "AllowShortIfStatementsOnASingleLine" : "true",
-  " \ "AlwaysBreakTemplateDeclarations" : "true",
-  " \ "AlignTrailingComments" : "false",
-  " \ "AlignConsecutiveAssignments" : "true",
-  " \ "Standard" : "C++11"
-  " \}
-" map to cf in C++ code
-" autocmd FileType c,cpp,objc nnoremap <buffer> <leader>cf :<C-u>ClangFormat<cr>
-" autocmd FileType c,cpp,objc vnoremap <buffer> <leader>cf :ClangFormat<cr>
-" autocmd FileType c,cpp,objc ClangFormatAutoEnable  "enable auto format on save
 
 " youcomeleteme --------------------------------------------------------------
 nnoremap <leader>td :YcmCompleter GoToDefinition<cr>
@@ -185,8 +161,10 @@ autocmd BufWritePre * :FixWhitespace
 colorscheme darkblue
 hi Normal guibg=NONE ctermbg=NONE
 
-" vim-flake8 -----------------------------------------------------------------
-autocmd BufWritePost *.py call Flake8()
+" black -----------------------------------------------------------------
+let g:black_linelength = 80
+let g:black_fast = 0
+autocmd BufWritePost *.py :Black
 
 " ghcmd-vim ------------------------------------------------------------------
 autocmd BufWritePost *.hs :GhcModCheckAndLintAsync

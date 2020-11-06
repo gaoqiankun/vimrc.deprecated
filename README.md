@@ -6,8 +6,16 @@ git clone https://github.com/gaoqiankun/vimrc.git ~/vimrc && cd ~/vimrc && bash 
 
 
 ## Dependencies
-1. Clang-format3.4 or higher (vim-clang-format)
-2. vim7.3+ build with python enabled(youcompleteme)
+1. vim8.1.2269+ build with python enabled
+2. python3 build with **--enable-shared**
+3. cmake for build youcompleteme
+
+
+## Theme
+Remove or comment solarized configs if you don't need solarized theme
+
+## Completion
+See [YouCompleteMe#user-guide](https://github.com/ycm-core/YouCompleteMe#user-guide)
 
 ## Key Maps
 
@@ -69,15 +77,4 @@ git clone https://github.com/gaoqiankun/vimrc.git ~/vimrc && cd ~/vimrc && bash 
 
 ### Comment Keys
 See [nerdcommenter#default-mappings](https://github.com/scrooloose/nerdcommenter#default-mappings)
-
-
-## Clang format
-remove  *AlignConsecutiveAssignments* option if your clang-format version less than 3.9 (latest)
-
-## Theme
-remove or comment solarized configs if you don't need solarized theme
-
-
-
-
 
