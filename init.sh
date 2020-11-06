@@ -1,35 +1,62 @@
+#! /usr/bin/env bash
+
 dir=$(cd `dirname $0`;pwd)
 home=$(cd;pwd)
-# init vimrc if not exist
-if [ ! -f "$dir/vimrc" ];then
-    touch "vimrc"
-fi
+vim_dir="${home}/.vim"
 
-# link vimrc to ~/.vimrc
-ln -sf "$dir/vimrc" ~/.vimrc
-
-# clear old ~/.vim if exist or create it
-if [ -d "$home/.vim" ];then
-    rm -rf "$home/.vim/*"
-else
-    mkdir "$home/.vim"
-fi
-
-# link conf to ~/.vim/conf
-ln -sf "$dir/conf" ~/.vim/
-
-# git not found waring
-if [ ! -n `which git` ];then
+function pre_install {
+  # git is required
+  if [ ! -n `which git` ];then
     echo "git not fond, install git first please."
     exit
-fi
+  fi
 
-# install vundle
-git clone https://github.com/VundleVim/Vundle.vim.git $home/.vim/bundle/Vundle.vim
+  if [ ! -n `which python3` ]; then
+    echo "python3 not fond, install python3 first please."
+    exit
+  fi
+}
 
-# install plugins
-vim +PluginInstall +qall
+function soft_link {
+  ln -sf "${dir}/vimrc" ~/.vimrc
 
-# every thing done
-echo ""
-echo "Everything done, ^-^.";
+  # create ~/.vim if not exists
+  [ ! -d "$vim_dir" ] && mkdir $vim_dir
+
+  # link conf to ~/.vim/conf
+  ln -sf "${dir}/conf" $vim_dir
+}
+
+function install_vundle {
+  local vundle_dir="${vim_dir}/bundle/Vundle.vim"
+  if [ ! -d "$vundle_dir" ]; then
+    git clone https://github.com/VundleVim/Vundle.vim.git $vundle_dir
+  fi
+}
+
+function install_ycm {
+  ycm_dir="$home/.vim/bundle/youcompleteme"
+  if [ ! -d "$ycm_dir" ]; then
+    git clone https://github.com/ycm-core/YouCompleteMe.git $ycm_dir
+  fi
+  $ycm_dir/install.py --all
+}
+
+function install {
+  soft_link
+  install_vundle
+  install_ycm
+
+  vim +PluginInstall +qall
+  vim +PluginClean +qall
+  vim +PluginUpdate +qall
+}
+
+function post_install {
+  echo ""
+  echo "Everything done, ^-^.";
+}
+
+pre_install
+install
+post_install
