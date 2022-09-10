@@ -15,6 +15,7 @@ endfunction
 
 " nerdtree -------------------------------------------------------------------
 let g:NERDTree_title='[NERD Tree]'
+let g:NERDTreeIgnore = ['\.pyc$', '^__pycache__$']
 "Close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let NERDTreeAutoDeleteBuffer = 1
