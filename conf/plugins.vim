@@ -27,7 +27,7 @@ Plugin 'vim-syntastic/syntastic'          " syntax checking hacks for vim
 Plugin 'valloric/youcompleteme'           " a code-completion engine
 "============================ Language specific =============================
 ">>>> Python
-Plugin 'ambv/black'                       " The uncompromising Python code formatter
+Plugin 'psf/black'                        " The uncompromising Python code formatter
 ">>>> Haskell
 Plugin 'eagletmt/ghcmod-vim'              " haskell linter
 Plugin 'eagletmt/neco-ghc'                " haskell completion
