@@ -165,6 +165,7 @@ hi Normal guibg=NONE ctermbg=NONE
 " black -----------------------------------------------------------------
 let g:black_linelength = 80
 let g:black_fast = 0
+let g:black_quiet = 1
 autocmd BufWritePost *.py :Black
 
 " ghcmd-vim ------------------------------------------------------------------
